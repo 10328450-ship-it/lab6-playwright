@@ -4,7 +4,7 @@ const { test, expect } = require('@playwright/test');
 
 test('1. Головна сторінка: Перевірка заголовка', async ({ page }) => {
   await page.goto('/');
-  await expect(page).toHaveTitle('ЦЕЙ ТЕСТ МАЄ ВПАСТИ');
+  await expect(page).toHaveTitle('Локальна сторінка');
 });
 
 test('2. Навігація: Перехід на сторінку контактів', async ({ page }) => {
@@ -26,3 +26,7 @@ test('4. Зовнішній сайт: Вікіпедія (Playwright)', async ({
   await expect(page).toHaveTitle(/Вікіпедія/);
 });
 
+test('Цей тест спеціально має впасти', async () => {
+  // Ми вимагаємо, щоб "правда" була "брехнею". Це завжди помилка.
+  expect(true).toBe(false); 
+});
