@@ -4,7 +4,7 @@ const { test, expect } = require('@playwright/test');
 
 test('1. Головна сторінка: Перевірка заголовка', async ({ page }) => {
   await page.goto('/');
-  await expect(page).toHaveTitle('Локальна сторінка');
+  await expect(page).toHaveTitle('ЦЕЙ ТЕСТ МАЄ ВПАСТИ');
 });
 
 test('2. Навігація: Перехід на сторінку контактів', async ({ page }) => {
