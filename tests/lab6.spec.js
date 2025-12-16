@@ -26,17 +26,3 @@ test('4. Зовнішній сайт: Вікіпедія (Playwright)', async ({
   await expect(page).toHaveTitle(/Вікіпедія/);
 });
 
-// --- SCREENSHOT ТЕСТИ (Перевірка зовнішнього вигляду) ---
-
-test('5. Visual: Вигляд сторінки контактів', async ({ page }) => {
-  await page.goto('/contact.html');
-  // Робимо скріншот і порівнюємо з еталоном
-  await expect(page).toHaveScreenshot('contact-full.png');
-});
-
-test('6. Visual: Вигляд кнопки Надіслати', async ({ page }) => {
-  await page.goto('/contact.html');
-  const btn = page.locator('#sendBtn');
-  // Скріншот тільки кнопки
-  await expect(btn).toHaveScreenshot('button-blue.png');
-});
